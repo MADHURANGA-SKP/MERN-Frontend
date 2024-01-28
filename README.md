@@ -1,8 +1,29 @@
-# React + Vite
+# MERN - REDUX (CRUD)- FRONTEND
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Full-Stack web app with CRUD operations created using Redux for state management and it allows users to Create, Read, Update, and Delete, Recipe CRUD's fields: recipeName, ingredients, and description. It is built using a modern tech stack, including React, MongoDB, Vite, Bootstrap, Express, and Node.js.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Create
+- **Read
+- **Update
+- **Delete
+  CRUD's fields of "recipeName", "ingredients" and "description"
+
+## Tech Stack
+
+- **Frontend:**
+  - React
+  - Vite
+  - Bootstrap CSS
+  
+- **Backend:**
+  - Express
+  - Node.js
+  - MongoDB
+
+## Preview
+![Sample Image](./ss-01.png)
+![Sample Image](./ss-02.png)
+![Sample Image](./ss-03.png)
+![Sample Image](./ss-04.png)
