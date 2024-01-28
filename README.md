@@ -22,7 +22,7 @@ This is a Full-Stack web app with CRUD operations created using Redux for state 
   - MongoDB
  
 ## To run the project,
-  - clone both Frontend and Backend to the same directory.(https://github.com/MADHURANGA-SKP/MERN-with-Redux-Backend)
+  - clone both Frontend and Backend to the same directory.(https://github.com/MADHURANGA-SKP/MERN-Backend)
   - then open it using IDE(VS code).
     
     ## Frontend
