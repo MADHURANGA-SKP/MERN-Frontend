@@ -2,6 +2,7 @@ import Users from "./Users";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateUser from "./CreateUser";
+import RecipeDetailsPage from "./RecipeDetailsPage";
 import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -50,6 +51,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Users />} />
           <Route path="/create" element={<CreateUser />} />
+          <Route path="/recipe/:id" element={<RecipeDetailsPage />} />
           <Route path="/edit/:id" element={<UpdateUser />} />
         </Routes>
       </BrowserRouter>

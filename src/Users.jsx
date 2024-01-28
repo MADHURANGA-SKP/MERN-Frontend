@@ -1,7 +1,7 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { deleteUser } from "./redux/userSlice";
 
 /*
@@ -12,6 +12,8 @@ import { deleteUser } from "./redux/userSlice";
   It also gets the dispatch function using the useDispatch hook.
   */
 const CreateUser = () => {
+  const navigate = useNavigate();
+
   const users = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
 
@@ -57,7 +59,7 @@ const CreateUser = () => {
             Add a recipe +
           </Link>
 
-          <table className="table bg-dark">
+          <table className="table ">
             <thead>
               <tr>
                 <th>Recipe Name</th>
@@ -70,7 +72,17 @@ const CreateUser = () => {
               {users.map((user) => {
                 return (
                   <tr key={user.id}>
-                    <td>{user.recipeName}</td>
+                    <td
+                      onClick={() => navigate(`/recipe/${user.id}`)}
+                      style={{
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                        textDecoration: "underline",
+                      }}
+                      className="text-secondary"
+                    >
+                      {user.recipeName}
+                    </td>
                     <td>{user.ingredients}</td>
                     <td>{user.description}</td>
                     <td>
