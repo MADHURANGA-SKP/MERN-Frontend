@@ -16,7 +16,7 @@ const Navbar = () => {
       </Link>
       <form className="form-inline">
         <button className="btn btn-danger mx-2" onClick={handleRefresh}>
-          <span className="glyphicon glyphicon-refresh"></span> Refresh
+          <span className="glyphicon glyphicon-refresh"></span> Refresh Page
         </button>
       </form>
     </nav>
