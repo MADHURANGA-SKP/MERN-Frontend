@@ -4,10 +4,10 @@ This is a Full-Stack web app with CRUD operations created using Redux for state 
 
 ## Features
 
-- **Create
-- **Read
-- **Update
-- **Delete
+- Create
+- Read
+- Update
+- Delete
   CRUD's fields of "recipeName", "ingredients" and "description"
 
 ## Tech Stack
