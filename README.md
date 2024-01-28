@@ -22,7 +22,7 @@ This is a Full-Stack web app with CRUD operations created using Redux for state 
   - Node.js
   - MongoDB
  
-  **To run the project,
+  ** To run the project,
   - clone both Frontend and Backend to the same directory.
   - then open it using IDE(VS code).
     
