@@ -4,12 +4,28 @@ import { addUser, updateUser } from "./redux/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
+/*
+"axios" is used for making HTTP requests, it uses to PUT request to update a user's information.
+
+"useEffect" and "useState" are React hooks used to manage side effects and state within functional components.
+
+"addUser" and "updateUser" are action creators from the Redux slice (userSlice) responsible for adding and updating user information in the Redux store.
+
+"useDispatch" and "useSelector" are hooks from React-Redux, allowing the component to dispatch actions and access the Redux store, respectively.
+
+"useNavigate" and "useParams" are hooks from React Router, enabling navigation and accessing parameters from the URL.
+*/
+
 function UpdateUser() {
+  // "UpdateUser" component is defined as a functional component named UpdateUser
+
   const { id } = useParams();
+  // it gets the "id" parameter from the URL using React Router's useParams hook.
 
   const [recipeName, setRecipeName] = useState();
   const [ingredients, setIngredients] = useState();
   const [description, setDescription] = useState();
+  //this Manages the component-level state using React
 
   const users = useSelector((state) => state.users.users);
 
@@ -19,9 +35,11 @@ function UpdateUser() {
     setIngredients(user.ingredients);
     setDescription(user.description);
   }, [users, id]);
+  // UpdateUser uses "useEffect"  to fetch the user's information from the Redux store when the 'id' changes. It updates the local component state accordingly.
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  //It retrieves the dispatch function from React-Redux to dispatch actions and navigate function from React Router for navigation.
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -37,6 +55,8 @@ function UpdateUser() {
       })
       .catch((err) => console.log(err));
   };
+
+  //   It handles the form submission for updating the user's information. And Sends a PUT request to the server with updated information, dispatches the updateUser action, and navigates back to the home page.
 
   return (
     <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
@@ -81,3 +101,9 @@ function UpdateUser() {
 }
 
 export default UpdateUser;
+
+/*
+  As an Summary:---------------------------------------------------------------
+  This component is designed for updating user information in the context of a CRUD application, 
+  where it interacts with the Redux store for state management and makes HTTP requests to update data on the server.
+*/

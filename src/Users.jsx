@@ -4,10 +4,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteUser } from "./redux/userSlice";
 
+/*
+  Functional Component:
+
+  CreateUser is a functional React component.
+  The component fetches the users array from the Redux store using the useSelector hook.
+  It also gets the dispatch function using the useDispatch hook.
+  */
 const CreateUser = () => {
   const users = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
 
+  /*
+  HandleDelete Function:-----------------------------------------------------
+
+  The handleDelete function is called when the user clicks the "Delete" buttonfor a specific recipe.
+
+  It shows a confirmation dialog using window.confirm.
+
+  If the user confirms, it sends a DELETE request to the server to delete therecipe with the specified id.Upon successful deletion, 
+  it dispatches the deleteUser action with the deleted user's id to update the Redux store.
+  */
   const handleDelete = (id) => {
     const shouldDelete = window.confirm(
       "Are you sure you want to delete this Recipe?"
@@ -23,13 +40,23 @@ const CreateUser = () => {
     }
   };
 
+  /*
+  Table:---------------------------------------------------------------------
+  The users.map function is used to defines the users array and generate table rows for each user.
+
+  Update and Delete Buttons:-------------------------------------------------
+  Each row has "Update" and "Delete" buttons.
+  Clicking the "Update" button navigates to the edit route for the specific recipe.
+  Clicking the "Delete" button triggers the handleDelete function to delete the corresponding recipe.
+  */
   return (
     <div>
-      <div className="d-flex vh-100 bg-secondary justify-content-center align-items-center">
+      <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
         <div className="w-100 bg-white rounded p-3 mx-2">
           <Link to="/create" className="btn btn-success btn-sm">
             Add a recipe +
           </Link>
+
           <table className="table bg-dark">
             <thead>
               <tr>
@@ -72,3 +99,14 @@ const CreateUser = () => {
 };
 
 export default CreateUser;
+
+/*
+Styling:---------------------------------------------------------------------
+
+The component uses Bootstrap classes for styling, such as bg-primary, bg-white, rounded, p-3, etc., to achieve a visually appealing layout.
+
+As an Summary:---------------------------------------------------------------
+this component is responsible for rendering a list of recipes, 
+providing options to add, update, and delete recipes. 
+It interacts with a Redux store to manage the state of the application.
+*/
