@@ -27,3 +27,4 @@ This is a Full-Stack web app with CRUD operations created using Redux for state 
 ![Sample Image](./ss-02.png)
 ![Sample Image](./ss-03.png)
 ![Sample Image](./ss-04.png)
+![Sample Image](./ss-05.png)
