@@ -56,3 +56,8 @@ function RecipeDetailsPage() {
 }
 
 export default RecipeDetailsPage;
+/*
+As an Summary:---------------------------------------------------------------
+this component fetches the "recipe" details based on the "id" parameter from the URL, 
+updates the state with the fetched details, and then renders the details in a table on the page.
+*/
