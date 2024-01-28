@@ -23,7 +23,7 @@ This is a Full-Stack web app with CRUD operations created using Redux for state 
   - MongoDB
 
 ## Preview
-![Sample Image](./ss-01.png)
-![Sample Image](./ss-02.png)
-![Sample Image](./ss-03.png)
-![Sample Image](./ss-04.png)
+![Sample Image](./S01.png)
+![Sample Image](./S02.png)
+![Sample Image](./S03.png)
+![Sample Image](./S04.png)
