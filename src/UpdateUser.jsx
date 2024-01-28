@@ -4,18 +4,6 @@ import { addUser, updateUser } from "./redux/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
-/*
-"axios" is used for making HTTP requests, it uses to PUT request to update a user's information.
-
-"useEffect" and "useState" are React hooks used to manage side effects and state within functional components.
-
-"addUser" and "updateUser" are action creators from the Redux slice (userSlice) responsible for adding and updating user information in the Redux store.
-
-"useDispatch" and "useSelector" are hooks from React-Redux, allowing the component to dispatch actions and access the Redux store, respectively.
-
-"useNavigate" and "useParams" are hooks from React Router, enabling navigation and accessing parameters from the URL.
-*/
-
 function UpdateUser() {
   // "UpdateUser" component is defined as a functional component named UpdateUser
 
